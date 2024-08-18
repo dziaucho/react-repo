@@ -5,10 +5,10 @@ import Button from './Button';
 class TopSection extends Component {
   render(): ReactNode {
     return (
-      <>
+      <div>
         <Button text="simulate error" />
         <Form />
-      </>
+      </div>
     );
   }
 }
