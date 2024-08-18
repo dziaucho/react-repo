@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, ReactNode } from 'react';
 
 interface InputProps {
   placeholder: string;
@@ -20,7 +20,7 @@ class Input extends Component<InputProps, InputState> {
     this.setState({ value: event.target.value });
   }
 
-  render(): React.ReactNode {
+  render(): ReactNode {
     return (
       <input
         type="text"

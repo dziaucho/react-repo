@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, ReactNode } from 'react';
 
 interface ButtonProps {
   text: string;
 }
 
 class Button extends Component<ButtonProps> {
-  render(): React.ReactNode {
+  render(): ReactNode {
     return <button>{this.props.text}</button>;
   }
 }
