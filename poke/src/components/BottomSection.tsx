@@ -1,11 +1,13 @@
 import React, { Component, ReactNode } from 'react';
-import CardPokemon from './CardPokemon';
+// import CardPokemon from './CardPokemon';
+import Pagination from './Pagination';
 
 class BottomSection extends Component {
   render(): ReactNode {
     return (
       <div>
-        <CardPokemon />
+        {/*<CardPokemon /> */}
+        <Pagination />
       </div>
     );
   }

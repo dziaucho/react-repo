@@ -1,0 +1,1 @@
+import CardPokemon from './CardPokemon';
