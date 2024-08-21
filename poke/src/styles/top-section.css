@@ -1,0 +1,44 @@
+.top-section {
+  display: flex;
+  padding: 0 5%;
+  width: 90%;
+  height: 15%;
+  align-items: center;
+}
+
+.form-search-top-section {
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  gap: 30px;
+}
+
+.input-text-top-section {
+  width: 80%;
+  height: 35px;
+  background-color: var(--bg-color);
+  border: 3px solid var(--border-color);
+  text-align: center;
+  font-weight: 800;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.submit-input-top-section {
+  width: 100px;
+  background-color: var(--section-color);
+  border: 3px solid var(--border-color);
+  cursor: pointer;
+  border-radius: 10px;
+  height: 45px;
+}
+
+.submit-input-top-section:hover {
+  background-color: var(--accent-button-color);
+  color: var(--bg-color);
+  opacity: 0.7;
+}
+
+.submit-input-top-section:active {
+  opacity: 0.5;
+}

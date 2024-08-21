@@ -1,0 +1,30 @@
+.bottom-section {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* pagination */
+
+.list-items-bottom-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  height: 80%;
+}
+
+.pagination-bottom-section {
+  height: 100%;
+}
+
+.item-bottom-section {
+  display: flex;
+  font-size: 15px;
+}
+
+.item-bottom-section img {
+  width: 10px;
+}

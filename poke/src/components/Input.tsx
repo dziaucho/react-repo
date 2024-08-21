@@ -22,7 +22,7 @@ class Input extends Component<InputProps, InputState> {
 
   render(): ReactNode {
     return (
-      <input
+      <input className='input-text-top-section'
         type="text"
         value={this.props.value}
         placeholder={this.props.placeholder}

@@ -5,7 +5,7 @@ import Pagination from './Pagination';
 class BottomSection extends Component {
   render(): ReactNode {
     return (
-      <div>
+      <div className='bottom-section'>
         {/*<CardPokemon /> */}
         <Pagination />
       </div>

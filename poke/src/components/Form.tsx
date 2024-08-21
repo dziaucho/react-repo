@@ -5,7 +5,7 @@ import SubmitInput from './SubmitInput';
 class Form extends Component {
   render(): ReactNode {
     return (
-      <form>
+      <form className='form-search-top-section'>
         <Input placeholder="put ur text here" />
         <SubmitInput />
       </form>

@@ -91,16 +91,16 @@ class Pagination extends Component<{}, DataItemsState> {
     const currentItems = dataItems.slice(indexOfFirstItem, indexOfLastItem);
 
     return (
-      <div>
-        <ul>
+      <div className='pagination-bottom-section'>
+        <ul className='list-items-bottom-section'>
           {currentItems.map((item, index) => (
-            <li key={index}>
+            <li className="item-bottom-section" key={index}>
               <NameHeading content={item} />
               <ImagePokeball />
             </li>
           ))}
         </ul>
-        <div>{this.renderPagination()}</div>
+        <div className='pagination-buttons-bottom-section'>{this.renderPagination()}</div>
       </div>
     );
   }
