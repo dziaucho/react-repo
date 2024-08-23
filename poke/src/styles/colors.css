@@ -3,6 +3,11 @@
   --text-color: #313131;
   --accent-text-color: #cb3b2e;
   --section-color: #C8E6F5;
+  --bottom-section-color: #f7c9b6;
   --border-color: #5CA0D3;
   --accent-button-color: #135a90;
+  --disabled-button: #a29087;
+  --pagination-button-color: #d77e58;
+  --accent-pagination-button-color: #d74100;
+  --accent-pagination-item-color: #bcaba4;
 }

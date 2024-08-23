@@ -1,0 +1,8 @@
+# 24.08 - 25.08;
+ts:
+  - finish with api after submit empty input zone;
+  - autofill (autocalculation) amount names for list of pokies;
+  - refactor pagination file (separate functionality a little bit, check "render" readability);
+
+css:
+  - refacor all files (repeatable, color file, check font — error with "regular" version);

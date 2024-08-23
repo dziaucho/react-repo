@@ -1,0 +1,17 @@
+.footer {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--section-color);
+  border-radius: 20px;
+}
+
+.footer-text,
+.footer-github-link {
+  font-weight: 700;
+}
+
+.footer-github-link {
+  color: var(--accent-text-color);
+}

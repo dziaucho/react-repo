@@ -17,7 +17,7 @@ class Pagination extends Component<{}, DataItemsState> {
     this.state = {
       dataItems: [],
       currentPage: 1,
-      itemsPerPage: 20,
+      itemsPerPage: 10,
       isLoading: true,
     };
   }
@@ -43,37 +43,43 @@ class Pagination extends Component<{}, DataItemsState> {
 
   renderPagination = () => {
     const { dataItems, currentPage, itemsPerPage } = this.state;
-    const pageNumbers: (number | string)[] = [];
     const pagesAmount = Math.ceil(dataItems.length / itemsPerPage);
+    const pageNumbers: (number | string)[] = [];
 
-    if (pagesAmount <= 10) {
+    if (pagesAmount <= 7) {
       for (let i = 1; i <= pagesAmount; i += 1) {
         pageNumbers.push(i);
       }
     } else {
-      pageNumbers.push(1, 2, 3);
-
-      if (currentPage > 7) {
+      if (currentPage <= 4) {
+        for (let i = 1; i <= 5; i += 1) {
+          pageNumbers.push(i);
+        }
         pageNumbers.push('...');
-      }
-
-      const startPage = Math.max(4, currentPage - 2);
-      const endPage = Math.min(pagesAmount - 1, currentPage + 2);
-
-      for (let i = startPage; i <= endPage; i += 1) {
-        pageNumbers.push(i);
-      }
-
-      if (currentPage < pagesAmount - 6) {
+        pageNumbers.push(pagesAmount);
+      } else if (currentPage >= pagesAmount - 3) {
+        pageNumbers.push(1);
+        pageNumbers.push('...');
+        for (let i = pagesAmount - 4; i <= pagesAmount; i += 1) {
+          pageNumbers.push(i);
+        }
+      } else {
+        pageNumbers.push(1);
+        pageNumbers.push('...');
+        for (let i = currentPage - 1; i <= currentPage + 1; i += 1) {
+          pageNumbers.push(i);
+        }
+        pageNumbers.push('...');
         pageNumbers.push(pagesAmount);
       }
     }
 
     return pageNumbers.map((number, index) => (
       <button
+        className={`pagination-button-number ${number === currentPage || number === '...' ? 'disabled-pagination-button-number' : ''}`} // HELLLLLLLLLLLLL
         key={index}
         onClick={() => number !== '...' && this.switchPage(number as number)}
-        disabled={number === '...'}
+        disabled={number === '...' || number === currentPage}
       >
         {number}
       </button>
@@ -91,16 +97,21 @@ class Pagination extends Component<{}, DataItemsState> {
     const currentItems = dataItems.slice(indexOfFirstItem, indexOfLastItem);
 
     return (
-      <div className='pagination-bottom-section'>
-        <ul className='list-items-bottom-section'>
+      <div className="pagination-bottom-section">
+        <ul className="list-items-bottom-section">
           {currentItems.map((item, index) => (
             <li className="item-bottom-section" key={index}>
-              <NameHeading content={item} />
+              <NameHeading
+                nameClass="item-bottom-section-name"
+                content={item}
+              />
               <ImagePokeball />
             </li>
           ))}
         </ul>
-        <div className='pagination-buttons-bottom-section'>{this.renderPagination()}</div>
+        <div className="pagination-buttons-bottom-section">
+          {this.renderPagination()}
+        </div>
       </div>
     );
   }
