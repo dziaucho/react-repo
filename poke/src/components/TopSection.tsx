@@ -26,8 +26,8 @@ class TopSection extends Component<TopSectionProps, TopSectionState> {
   render(): ReactNode {
     return (
       <div className="top-section">
-        <Button text="simulate error" className="top-section-simulate-error" />
-        <Form
+        <Button text="simulate error" className="top-section_button-error" />
+        <Form className='top-section_form-search'
           inputValue={this.state.inputValue}
           onInputChange={event =>
             this.setState({ inputValue: event.target.value })

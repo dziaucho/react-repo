@@ -1,19 +1,19 @@
 .header {
+  height: 20%;
+  padding: 2%;
+  border-radius: 20px;
+  background-color: var(--bg-color_section);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 20%;
-  background-color: var(--section-color);
-  border-radius: 20px;
-  padding: 5%;
+  justify-content: space-around;
+  gap: 5px;
 }
 
-.main-heading-header {
-  color: var(--accent-text-color);
-  margin: 10px;
+.header_heading {
+  color: var(--text-color_accent);
 }
 
-.desc-text-header {
+.header_par {
   font-weight: 700;
 }

@@ -6,3 +6,6 @@ ts:
 
 css:
   - refacor all files (repeatable, color file, check font — error with "regular" version);
+
+
+— put pagination right into bottom-section instead of bottom-section => pagination???? (think 'bout);

@@ -1,10 +1,15 @@
 import React, { Component, ReactNode } from 'react';
 
-class SubmitInput extends Component {
+
+interface SubmitInputProps {
+  className: string;
+}
+
+class SubmitInput extends Component<SubmitInputProps> {
   render(): ReactNode {
     return (
       <input
-        className="submit-input-top-section"
+        className={this.props.className}
         type="submit"
         value="pokemon!"
       ></input>

@@ -1,8 +1,9 @@
 import React, { Component, ReactNode } from 'react';
 
 interface InputProps {
-  placeholder: string;
+  className: string;
   value: string;
+  placeholder: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -10,7 +11,7 @@ class Input extends Component<InputProps> {
   render(): ReactNode {
     return (
       <input
-        className="input-text-top-section"
+        className={this.props.className}
         type="text"
         value={this.props.value}
         placeholder={this.props.placeholder}
