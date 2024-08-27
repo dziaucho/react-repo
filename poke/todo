@@ -1,8 +1,8 @@
 # 24.08 - 25.08;
 ts:
-  - finish with api after submit empty input zone;
+  - finish with api after submit empty input zone; @done
   - autofill (autocalculation) amount names for list of pokies;
-  - refactor pagination file (separate functionality a little bit, check "render" readability);
+  - refactor pagination file (separate functionality a little bit, check "render" readability); @done
 
 css:
   - refacor all files (repeatable, color file, check font — error with "regular" version);

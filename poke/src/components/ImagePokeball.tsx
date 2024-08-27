@@ -1,9 +1,15 @@
 import React, { Component, ReactNode } from 'react';
 import pokeball from '../assets/pokeball.svg';
 
-class ImagePokeball extends Component {
+interface ImagePokeballProps {
+  className: string;
+}
+
+class ImagePokeball extends Component<ImagePokeballProps> {
   render(): ReactNode {
-    return <img src={pokeball} alt="pokeball"></img>;
+    return (
+      <img src={pokeball} alt="pokeball" className={this.props.className}></img>
+    );
   }
 }
 

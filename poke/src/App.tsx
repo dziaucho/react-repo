@@ -4,13 +4,30 @@ import TopSection from './components/TopSection';
 import BottomSection from './components/BottomSection';
 import Footer from './components/Footer';
 
-class App extends Component {
+interface AppState {
+  showPagination: boolean;
+}
+
+class App extends Component<{}, AppState> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      showPagination: false,
+    };
+  }
+
+  handleFormSubmit = (inputValue: string) => {
+    this.setState({ showPagination: inputValue.trim() === '' });
+  };
+
   render() {
+    const { showPagination } = this.state;
+
     return (
       <>
         <Header />
-        <TopSection />
-        <BottomSection />
+        <TopSection onFormSubmit={this.handleFormSubmit} />
+        <BottomSection showPagination={showPagination} />
         <Footer />
       </>
     );
